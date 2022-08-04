@@ -12,8 +12,7 @@ description: personal note of missing-semester lecture1
 
 To open a shell prompt, we need a terminal like:
 
-![](<.gitbook/assets/截屏2022-08-03 下午5.21.34.png>)
-
+![](../.gitbook/assets/%E6%88%AA%E5%B1%8F2022-08-03%20%E4%B8%8B%E5%8D%885.21.34.png)
 a prompt often looks like:&#x20;
 
 ```shell
