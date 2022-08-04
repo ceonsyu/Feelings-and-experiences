@@ -1,5 +1,4 @@
 # Table of contents
 
-## 平台研发部技术分享
-
-* [lecture3 容器化技术2](README.md)
+1. [the shell](the-shell.md)
+2. [shell-tools-and-scripting](shell-tools-and-scripting.md)
