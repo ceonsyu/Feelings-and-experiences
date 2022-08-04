@@ -1,61 +1,41 @@
 ---
-description: personal note of missing-semester lecture1
+description: gaohongbin-20220803 容器化技术第2篇（docker）
 ---
 
-# The shell
+# lecture3 容器化技术2
 
-### What is the Shell
+1. 容器到底是什么
+2. 容器Namespaces实现原理
+3. 容器Cgroups实现原理
 
-* Textual interface of all platforms we can get our hand on. Shell allows us to run programs, give them input, and inspect their output
+容器生态系统是由许多技术、大量专业术语和大公司相互争斗组成的
 
-### Using the shell
+![容器技术的关系](<.gitbook/assets/截屏2022-08-03 下午7.40.37 (1).png>)
 
-To open a shell prompt, we need a terminal like:
+*   为什么docker出现，才引领了容器的浪潮：
 
-![](<.gitbook/assets/截屏2022-08-03 下午5.21.34.png>)
+    因为docker创造性地引入了“镜像”
 
-a prompt often looks like:&#x20;
+![镜像](<.gitbook/assets/截屏2022-08-03 下午7.48.56.png>)
 
-```shell
-missing:~$
-```
+docker的运行模式：
 
-it tells you that you are on the machine `missing` and current working directory(`~`, short for "home"). The `$`  tells you that you are not the root user. In occasionally, the machine name and `$` will be omitted, that is:
+![docker管理容器的模式](<.gitbook/assets/截屏2022-08-03 下午7.51.43.png>)
 
-```
-~
-```
+* 容器可以看作是一个轻量级的虚拟机，借用linux的一些隔离功能，使得应用间得以隔离
 
-We can execute a command wit arguments:
+Namespace技术实际上修改了应用进程看待整个计算机的“视图”，docker容器里的应用，实际上还是宿主机上的一个进程，在宿主机的namespace下，可以看到所有容器。在单个容器的内部，只能看到自己namespace下的内容。
 
-```
-~ echo hello
-hello
-```
+![namespace](<.gitbook/assets/截屏2022-08-03 下午7.55.30.png>)
 
-In this case, we told the shell to execute the program `echo` with the argument `hello`. The `echo` program simply prints out its argument.
+* docker的网络模型， CNM（Container Network Model），最常用的是网桥的模式，帮助容器进行通信
 
-**The shell parses the command by splitting it by whitespace.**
 
-### **Navigating in the shell**
 
-* A path on shell is a list of directories separated by `/` on linux and macOS, by `\` on windows.&#x20;
+* Cgroup
 
-The path `/` is the root of the file system on linux and macOS. Windows has one root for each disk partition(like `C:\`). We can see the current working directory with the `pwd` command and change it with `cd` .&#x20;
+它提供了一种机制，这种机制可以根据需求把一系列任务以及子任务整合到按资源划分的组内。有了这个技术，就可以对一个进程或一组进程的计算机资源消耗进行限制。
 
-We can use `ls` to print the contents of the current directory, `ll`  to print it with long listing format:
+* docker和k8s
 
-```shell
-(base) ➜  code ls
-bdd56b25a5f547599f7f dtreeviz-demo        dtreeviz-master      qd-ha                regression           xcode-demo
-(base) ➜  code ll
-total 0
-drwxr-xr-x   8 qinshunong1  staff   256B  8  3 13:50 bdd56b25a5f547599f7f
-drwxr-xr-x  20 qinshunong1  staff   640B  7 28 15:51 dtreeviz-demo
-drwxrwxr-x@ 16 qinshunong1  staff   512B  7 28 15:06 dtreeviz-master
-drwxr-xr-x  14 qinshunong1  staff   448B  8  1 18:33 qd-ha
-drwxr-xr-x   5 qinshunong1  staff   160B  7 27 16:31 regression
-drwxr-xr-x   7 qinshunong1  staff   224B  7 27 00:13 xcode-demo
-```
-
-In this case, `(base)` is my python virtual environment, `code` is the current working directory.
+docker完成容器的创建、部署，k8s完成容器的保持、调度、编排
