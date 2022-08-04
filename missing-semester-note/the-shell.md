@@ -57,4 +57,13 @@ drwxr-xr-x   5 qinshunong1  staff   160B  7 27 16:31 regression
 drwxr-xr-x   7 qinshunong1  staff   224B  7 27 00:13 xcode-demo
 ```
 
-In this case, `(base)` is my python virtual environment, `code` is the current working directory.
+In this case, `(base)` is my python virtual environment, `code` is the current working directory. 
+
+what dose `drwxr-xr-x` mean: 
+
+* `d`  --> this file is a directory 
+* `rwx` --> read, write, execute. only for the owning group
+
+some other handy programs: 
+
+`mv`:to rename/move a file, `cp`:to copy a file, `mkdir`:to make a new directory
