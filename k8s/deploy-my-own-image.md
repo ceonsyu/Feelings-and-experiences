@@ -1,5 +1,5 @@
 I have an application--[xgboost-serving](https://github.com/iqiyi/xgboost-serving), I builded it according to the guide of developers. After that, I have an image on my docker:
-![](figures/截屏2022-08-05%20下午6.37.52.png)
+![xgboost-serving image](figures/截屏2022-08-05%20下午6.37.52.png)
 ## Step 1 Push Image
 Before this step, It is needed to explain about building an application, It is something about build our code under Linux OS, make a Dockerfile and so on, I am not pretty sure about the whole procedure right now, hope I can figure it out someday.  
 In order to create a deployment with my own image, I need to push this image to **Docker Hub**, a docker account is needed in this step:
@@ -10,7 +10,7 @@ docker tag xgboost-serving qinshunong/xgboost-serving:v1.2.1-jdos
 docker push qinshunong/xgboost-serving:v1.2.1-jdos
 ```
 And there it is:
-![](figures/截屏2022-08-05%20下午11.55.12.png)
+![docker hub](figures/截屏2022-08-05%20下午11.55.12.png)
 ## Step 2 Make Ymal file
 Today I just used an `ymal` file like:
 ```yml
