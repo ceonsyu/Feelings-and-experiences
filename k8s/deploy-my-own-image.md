@@ -1,3 +1,6 @@
+---
+description: create a deployment with local docker image
+---
 I have an application--[xgboost-serving](https://github.com/iqiyi/xgboost-serving), I builded it according to the guide of developers. After that, I have an image on my docker:
 ![xgboost-serving image](figures/截屏2022-08-05%20下午6.37.52.png)
 ## Step 1 Push Image
