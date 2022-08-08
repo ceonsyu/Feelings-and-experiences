@@ -77,6 +77,30 @@ The kernel knows to execute this with a python interpreter instead of a shell co
 ### Finding how to use commands
 The first-order approach is to call said command with the `-h` or `--help` flags. A more detailed approach is to use the `man` command to open the manpage of command, short for manual page.  
 Sometimes manpage may make it hard to decipher what flags/syntax to use. [TLDR pages](https://tldr.sh).
+```shell
+#Cannot success inside the wall without VPN.
+ ~ tldr cat
+
+  cat
+
+  打印和拼接文件的工具。
+  更多信息：https://www.gnu.org/software/coreutils/cat.
+
+  - 以标准输出，打印文件内容：
+    cat file
+
+  - 多文件合并到目标文件：
+    cat file1 file2 > target_file
+
+  - 多文件合并，并追加到目标文件：
+    cat file1 file2 >> target_file
+
+  - 显示行号：
+    cat -n file
+
+  - 显示不可打印和空白的字符（使用 `M-` 前缀标记非 ASCII 字符）：
+    cat -v -t -e file
+```
 ### Finding files
 `find`, `fzf`, `fd`, `locate` and so on.
 ### Finding code
