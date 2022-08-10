@@ -29,3 +29,8 @@ There are many ways to get a lightweight version of the deep model from the full
 In general, COLD achieved the goal of using the cross features of user features and ad features in the pre-ranking system, with the computing performance and the reducing of computation power acceptable.
 ![development history of the pre-ranking system](figures/截屏2022-08-09%20下午6.17.38.png)
 
+#### Several questions:
+- What's the specific steps of COLD? What does every block mean in its infrastructure? What is GwEN?
+- Why COLD can be implemented under a fully online infrastructure?
+- How does SE block work?
+- Why vector-based DNN has those shortcomings?
