@@ -71,9 +71,11 @@ graph BT
 ### Common Activation Functions
 The following sigmoid activation function converts the weighted sum to a value between 0 and 1.
 $$F(x)=\frac{1}{1+e^{-x}}$$
-![sigmoid](../figures/sigmoid.svg)
+![sigmoid](../figures/sigmoid.svg)  
+
 The following **rectified linear unit** activation function (or **ReLU**, for short) often works a little better than a smooth function like the sigmoid, while also being significantly easier to compute.
 $$F(x)=max(0,x)$$
-![ReLU](../figures/relu.svg)
+![ReLU](../figures/relu.svg) 
+
 In fact, any mathematical function can serve as an activation function. Suppose that $\sigma$ represents our activation function (Relu, Sigmoid, or whatever). Consequently, the value of a node in the network is given by the following formula:
 $$\sigma(w\cdot x+b)$$
