@@ -9,3 +9,6 @@ Searching topK interesting items for each user. In the retrieval process, each l
 
 ### Discriminator
 Deep model plays the role of discriminator in TDM, whose outputs are the interest of (user, node) pairs.
+
+### Example 
+Official [quick start](https://github.com/alibaba/x-deeplearning/wiki/%E6%B7%B1%E5%BA%A6%E6%A0%91%E5%8C%B9%E9%85%8D%E6%A8%A1%E5%9E%8B(TDM)). Docker, [hadoop](https://medium.com/beeranddiapers/installing-hadoop-on-mac-a9a3649dbc4d), siwg, cmake are needed.
