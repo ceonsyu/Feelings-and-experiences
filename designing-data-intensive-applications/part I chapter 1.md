@@ -32,3 +32,7 @@ Three concerns that are important in most software systems:
 ---
 
 ## Reliability
+
+**Function, Performance, Security**
+
+When  we talk about "fault-tolerant" of system, there is some limitations, we can't handle every possible kind of fault. So it only makes sense to talk about tolerating **certain types** of faults.
